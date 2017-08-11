@@ -7,20 +7,23 @@ let Data = (props) => {
             {
                 Object.entries(props.records).map(array => {
                     let record = array[1];
-                    return <div className="record" key = { record.id}>
-                        <p>ID: { record.id}</p>
-                        <p>Name: { record.name}</p>  
-                        <p>Point: { record.piont }</p>
-                       <p>  LOCATION :</p>
-                       <p>latitude: { record.location["latitude"] }</p>
-                      <p>longitude: { record.location["longitude"] }</p>
-                      <p>Address: { record.address }</p>
-                      <p>MENU:</p>
-                       <p>tea: { record.menu["tea"]}</p> 
-                       <p>coffee: { record.menu["coffee"]}</p> 
-                        <p>cake: { record.menu["coffee"]}</p> 
-                        <p>---------------------</p>
-                    </div>;
+                    console.log(record)
+                    return (
+                        <div className="record" key = { record.id}>
+                            <p>ID: { record.id}</p>
+                            <p>Name: { record.name}</p>  
+                            <p>Point: { record.piont }</p>
+                            <p>LOCATION:</p>
+                            <p>latitude: { record.location["latitude"] }</p>
+                            <p>longitude: { record.location["longitude"] }</p>
+                            <p>Address: { record.address }</p>
+                            <p>MENU:</p>
+                            <p>tea: { record.menu["tea"]}</p> 
+                            <p>coffee: { record.menu["coffee"]}</p> 
+                            <p>cake: { record.menu["coffee"]}</p> 
+                            <p>---------------------</p>
+                        </div>
+                    );
                 })
             }
         </div>

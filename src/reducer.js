@@ -1,24 +1,23 @@
 const initialState = {
   records: {},
-  filter:null,
+  filter: null,
   filteredcafeInfo: {
-  "cafe1":{
-   id:null,
-   name:null,
-   piont:null,
-   location:{
-    latitude:null,
-    longitude: null,
-    name: ""
-   },
-  address:null,
-   menu:{
-     tea: 0,
-     coffee:0,
-     cake:0
-   }
-  },
-}}
+    id: null,
+    name: null,
+    piont: null,
+    location: {
+      latitude: null,
+      longitude: null,
+      name: ""
+    },
+    address: null,
+    menu: {
+      tea: 0,
+      coffee: 0,
+      cake: 0
+    }
+  }
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -34,19 +33,20 @@ const reducer = (state = initialState, action) => {
   }
 }
 
-const inputCafeName = (state, action)=>{
-  let newState =  Object.assign({}, state)
-  if(action.name === ""){
+const inputCafeName = (state, action) => {
+  let newState = Object.assign({}, state)
+  if (action.name === "") {
     newState.filter = null;
     newState.filteredcafeInfo = {
-   id:null,
-   name:null,
-   piont:null,
-   location:{
-    latitude:null,
-    longitude: null,
-    name: ""
-   }}
+      id: null,
+      name: null,
+      piont: null,
+      location: {
+        latitude: null,
+        longitude: null,
+        name: ""
+      }
+    };
   }
   else
     newState.filter = action.name;
@@ -57,10 +57,12 @@ const inputCafeName = (state, action)=>{
 
 const findCafeInfo = (state, action) => {
   let newState = Object.assign({}, state);
-  console.log(state,"state")
-   if(state.filter){
+  console.log(state, "state")
+  if (state.filter) {
     const record = state.records[0];
+    console.log("record.id", record.id)
     newState.filteredCafeInfo = {
+
       id: record.id,
       // name: record.name,
       // point: record.piont,
@@ -69,6 +71,7 @@ const findCafeInfo = (state, action) => {
       // timestamp: record.timestamp
     }
   }
+  console.log("newState.filteredCafeInfo", newState.filteredCafeInfo.id)
   return newState;
 }
 

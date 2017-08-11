@@ -11,9 +11,8 @@ const fs = require('fs');
 class App extends Component {
 
   componentDidMount() {
-    let records = this.props.getalldata();
+    this.props.getalldata();
   }
-
 
   render() {
     return (
@@ -31,7 +30,6 @@ const mapDispatchToProps = dispatch => {
   return {
     getalldata: () => {
       // let records = JSON.parse(fs.readFileSync("./data/cafe.json",'utf8')) ;
-      // console.log(records);
       let records = [{
         "id": 1,
         "name": "cafe1",
@@ -47,7 +45,7 @@ const mapDispatchToProps = dispatch => {
           "coffee": 1300,
           "cake": 2000
         }
-      }]
+      }];
       dispatch({ type: 'GET_POSITIONS', records });
     }
   }
