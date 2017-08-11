@@ -24,7 +24,7 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'GET_POSITIONS':
       return Object.assign({}, state, { records: action.records })
-    case 'INPUT_CAFE_ID':
+    case 'INPUT_CAFE_NAME':
       return inputCafeName(state, action);
     case 'FIND_CAFE_INFO':
       return findCafeInfo(state, action)
@@ -39,7 +39,6 @@ const inputCafeName = (state, action)=>{
   if(action.name === ""){
     newState.filter = null;
     newState.filteredcafeInfo = {
-      "cafe1":{
    id:null,
    name:null,
    piont:null,
@@ -47,21 +46,24 @@ const inputCafeName = (state, action)=>{
     latitude:null,
     longitude: null,
     name: ""
-   }}}
+   }}
   }
   else
     newState.filter = action.name;
+  // console.log("action.name",action.name);
+  // console.log("newState.filter",newState.filter);
   return newState;
 }
 
 const findCafeInfo = (state, action) => {
   let newState = Object.assign({}, state);
-  if(state.records[state.filter]){
-    const record = state.records[state.filter];
+  console.log(state,"state")
+   if(state.filter){
+    const record = state.records[0];
     newState.filteredCafeInfo = {
       id: record.id,
-      name: record.name,
-      point: record.piont,
+      // name: record.name,
+      // point: record.piont,
       // position: record.position,
       // distance: record.distance,
       // timestamp: record.timestamp

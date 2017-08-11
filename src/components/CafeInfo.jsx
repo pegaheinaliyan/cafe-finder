@@ -1,12 +1,13 @@
 import React from 'react';
 
-const cafeInfo = (props) => {
+const CafeInfo = (props) => {
   return (
     <div id="cafe-info">
-      <input id="input-cafe-id" type="text" onChange={(event) => props.inputCafeName(event.target.value)} />
+      <input id="input-cafe-name" type="text" onChange={(event) => props.inputCafeName(event.target.value)} />
       <button id="find-cafe-button" onClick={props.findCafeInfo}>find cafe info</button>
       <div className="filteredcafeInfo" key={props.filteredcafeInfo.id}>
-        <p>ID: {props.filteredcafeInfo["cafe1"].id}</p>
+      
+        <p>ID: {props.filteredcafeInfo.id}</p>
         <p>Name: {props.filteredcafeInfo.name}</p>
         <p>Point: {props.filteredcafeInfo.piont}</p>
         <p>  LOCATION :</p>
@@ -23,4 +24,4 @@ const cafeInfo = (props) => {
   );
 }
 
-export default cafeInfo;
+export default CafeInfo;

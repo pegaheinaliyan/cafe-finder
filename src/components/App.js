@@ -33,21 +33,19 @@ const mapDispatchToProps = dispatch => {
       // let records = JSON.parse(fs.readFileSync("./data/cafe.json",'utf8')) ;
       // console.log(records);
       let records = [{
-        "cafe1": {
-          "id": 1,
-          "name": "cafe1",
-          "piont": 3,
-          "location": {
-            "latitude": 32.844151,
-            "longitude": -86.591963,
-            "name": ""
-          },
-          "address": "Iran,Tehran,Gharb,num32",
-          "menu": {
-            "tea": 1000,
-            "coffee": 1300,
-            "cake": 2000
-          }
+        "id": 1,
+        "name": "cafe1",
+        "piont": 3,
+        "location": {
+          "latitude": 32.844151,
+          "longitude": -86.591963,
+          "name": "hi"
+        },
+        "address": "Iran,Tehran,Gharb,num32",
+        "menu": {
+          "tea": 1000,
+          "coffee": 1300,
+          "cake": 2000
         }
       }]
       dispatch({ type: 'GET_POSITIONS', records });

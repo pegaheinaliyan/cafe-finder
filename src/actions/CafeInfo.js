@@ -1,7 +1,7 @@
-export function inputCafeName(id) {
+export function inputCafeName(name) {
   return {
-    type: 'INPUT_CAFE_name',
-    id
+    type: 'INPUT_CAFE_NAME',
+    name
   }
 }
 export function findCafeInfo(){

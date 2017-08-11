@@ -6,7 +6,7 @@ let Data = (props) => {
             <h3>CAFES:</h3>
             {
                 Object.entries(props.records).map(array => {
-                    let record = array[1]["cafe1"];
+                    let record = array[1];
                     return <div className="record" key = { record.id}>
                         <p>ID: { record.id}</p>
                         <p>Name: { record.name}</p>  
