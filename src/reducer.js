@@ -61,8 +61,7 @@ const findCafeInfo = (state, action) => {
   if (state.filter) {
     const record = state.records[0];
     console.log("record.id", record.id)
-    newState.filteredCafeInfo = {
-
+    newState.filteredcafeInfo = {
       id: record.id,
       // name: record.name,
       // point: record.piont,
@@ -71,7 +70,7 @@ const findCafeInfo = (state, action) => {
       // timestamp: record.timestamp
     }
   }
-  console.log("newState.filteredCafeInfo", newState.filteredCafeInfo.id)
+  console.log("newState",newState)
   return newState;
 }
 
