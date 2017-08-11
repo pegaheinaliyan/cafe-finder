@@ -1,0 +1,54 @@
+{
+ "cafe1":{
+   "id":1,
+   "name": "cafe1",
+   "piont": 3,
+   "location":{
+    "latitude":32.844151,
+    "longitude": -86.591963,
+    "name": ""
+   },
+   "address":"Iran,Tehran,Gharb,num32",
+   "menu":{
+     "tea": 1000,
+     "coffee":1300,
+     "cake":2000
+   }
+ },
+
+ "cafe2":{
+   "id":2,
+   "name": "cafe2",
+   "piont": 2,
+   "location":{
+    "latitude":33.278775,
+    "longitude": -87.09893,
+    "name": ""
+   },
+   "address":"Japon,Rappongi,num58",
+   "menu":{
+     "tea": 1400,
+     "coffee":1800,
+     "cake":2300
+   }
+ },
+
+ "cafe3":{
+   "id":1,
+   "name": "cafe3",
+   "piont": 5,
+   "location":{
+    "latitude":34.367333,
+    "longitude": -86.89353,
+    "name": ""
+   },
+   "address":"Iran,Tehran,Vesal,num6",
+   "menu":{
+     "tea": 800,
+     "coffee":1100,
+     "cake":17
+   }
+ }
+
+}
+
