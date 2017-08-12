@@ -12,9 +12,9 @@ const initialState = {
     },
     address: null,
     menu: {
-      tea: 0,
-      coffee: 0,
-      cake: 0
+      tea: null,
+      coffee: null,
+      cake: null
     }
   }
 };
@@ -58,27 +58,23 @@ const findCafeInfo = (state, action) => {
   console.log(state, "state")
   if (state.filter) {
     const record = state.records[0];
-    console.log("record", record)
-
-    console.log(record.point,"point");
     newState.filteredcafeInfo = {
       id: record.id,
       name: record.name,
       point: record.point,
       location: {
         latitude: record.location.latitude,
-        longitude: null,
-        name: ""
+        longitude: record.location.longitude,
       },
-      address:record.address,
-       menu: {
-      tea: record.tea,
-      coffee: record.coffee,
-      cake: record.cake
-    }
+      address: record.address,
+      menu: {
+        tea: record.menu.tea,
+        coffee: record.menu.coffee,
+        cake: record.menu.cake
+      }
     }
   }
-  console.log("newState",newState)
+  console.log("newState", newState)
   return newState;
 }
 

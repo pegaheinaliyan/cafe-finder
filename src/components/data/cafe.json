@@ -1,5 +1,5 @@
 [{
- "cafe1":{
+
    "id":1,
    "name": "cafe1",
    "piont": 3,
@@ -15,8 +15,7 @@
      "cake":2000
    }
  },
-
- "cafe2":{
+{
    "id":2,
    "name": "cafe2",
    "piont": 2,
@@ -30,7 +29,6 @@
      "tea": 1400,
      "coffee":1800,
      "cake":2300
-   }
  },
 
  "cafe3":{

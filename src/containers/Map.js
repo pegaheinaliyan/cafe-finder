@@ -22,6 +22,7 @@ const mapStateToProps = (state) => {
   //   return {markers};
   // }
   for (let prop in state.records) {
+    console.log("tea",state.records[prop].menu["tea"]);
     markers.push({
       id: state.records[prop].id,
      name: state.records[prop].name,
@@ -35,7 +36,7 @@ const mapStateToProps = (state) => {
     });
   } 
 
-  console.log(markers,"markers")
+ 
   return { markers };
 }
 
