@@ -28,7 +28,6 @@ class App extends Component {
 const mapDispatchToProps = dispatch => {
   return {
     getalldata: () => {
-      // let records = JSON.parse(fs.readFileSync("./data/cafe.json",'utf8')) ;
       let records = [{
 
         "id": 1,
