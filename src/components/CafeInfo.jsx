@@ -3,8 +3,8 @@ import React from 'react';
 const CafeInfo = (props) => {
   return (
     <div id="cafe-info">
-      <input id="input-cafe-name" type="text" onChange={(event) => props.inputCafeName(event.target.value)} />
-      <button id="find-cafe-button" onClick={props.findCafeInfo}>find cafe info</button>
+      <input className="wrapper" id="input-cafe-name" type="text" onChange={(event) => props.inputCafeName(event.target.value)} />
+      <button className = "button" id="find-cafe-button" onClick={props.findCafeInfo}>SEARCHE_BY_NAME</button>
       <div className="filteredcafeInfo" key={props.filteredcafeInfo.id}>
 
         <p>ID: {props.filteredcafeInfo.id}</p>
