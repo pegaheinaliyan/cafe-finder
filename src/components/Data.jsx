@@ -12,7 +12,7 @@ let Data = (props) => {
                         <div className="record" key = { record.id}>
                             <p>ID: { record.id}</p>
                             <p>Name: { record.name}</p>  
-                            <p>Point: { record.piont }</p>
+                            <p>Point: { record.point }</p>
                             <p>LOCATION:</p>
                             <p>latitude: { record.location["latitude"] }</p>
                             <p>longitude: { record.location["longitude"] }</p>

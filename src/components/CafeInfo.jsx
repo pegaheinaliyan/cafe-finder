@@ -9,15 +9,15 @@ const CafeInfo = (props) => {
       
         <p>ID: {props.filteredcafeInfo.id}</p>
         <p>Name: {props.filteredcafeInfo.name}</p>
-        <p>Point: {props.filteredcafeInfo.piont}</p>
+        <p>Point: {props.filteredcafeInfo.point}</p>
         <p>  LOCATION :</p>
-        {/* <p>latitude: {props.filteredcafeInfo.location["latitude"]}</p>
+       <p>latitude: {props.filteredcafeInfo.location["latitude"]}</p>
         <p>longitude: {props.filteredcafeInfo.location["longitude"]}</p>
         <p>Address: {props.filteredcafeInfo.address}</p>
-        <p>MENU:</p>
+         <p>MENU:</p>
         <p>tea: {props.filteredcafeInfo.menu["tea"]}</p>
         <p>coffee: {props.filteredcafeInfo.menu["coffee"]}</p>
-        <p>cake: {props.filteredcafeInfo.menu["cake"]}</p> */}
+        <p>cake: {props.filteredcafeInfo.menu["cake"]}</p>  
 
       </div>
     </div>

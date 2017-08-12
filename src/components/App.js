@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Data from '../containers/Data';
 import CafeInfo from '../containers/CafeInfo';
-import Map from './Map';
+import Map from '../containers/Map';
 import '../App.css';
 
 const fs = require('fs');
-
 
 class App extends Component {
 
@@ -33,7 +32,7 @@ const mapDispatchToProps = dispatch => {
       let records = [{
         "id": 1,
         "name": "cafe1",
-        "piont": 3,
+        "point": 3,
         "location": {
           "latitude": 32.844151,
           "longitude": -86.591963,

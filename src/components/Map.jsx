@@ -10,12 +10,13 @@ const MyMap = withGoogleMap(props => {
     <GoogleMap
       defaultZoom = {4}
       defaultCenter = {{ lat: 40.0412204, lng: -100.9387545 }}
-    >
-      {/* {props.markers.map((marker, idx) => (
+    >  
+    {console.log(props.markers,"props.markers")}
+       {props.markers.map((marker, idx) => (
       <Marker key = {idx}
         position = {{lat : marker.latitude, lng: marker.longitude }}
       />
-      ))} */}
+      ))} 
     </GoogleMap >
   )}
 );
@@ -31,14 +32,14 @@ class Map extends Component {
         mapElement={
           <div style={{ height: `1000px` }} />
         }
-       // markers={this.props.markers}
+       markers={this.props.markers} 
       ></MyMap>
       </div>)
   }
 }
 
-// Map.propTypes = {
-//   markers: PropTypes.array.isRequired
-// };
+Map.propTypes = {
+  markers: PropTypes.array.isRequired
+};
 
 export default Map;
