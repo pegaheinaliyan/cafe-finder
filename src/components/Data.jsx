@@ -7,7 +7,7 @@ let Data = (props) => {
             {
                 Object.entries(props.records).map(array => {
                     let record = array[1];
-                    console.log(record)
+                    console.log(record,"record")
                     return (
                         <div className="record" key = { record.id}>
                             <p>ID: { record.id}</p>
