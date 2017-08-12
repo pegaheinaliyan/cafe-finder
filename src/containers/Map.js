@@ -4,25 +4,23 @@ import Map from '../components/Map';
 
 const mapStateToProps = (state) => {
   let markers = [];
-  console.log("hi")
-  // if(state.filteredcafeInfo.id !== null ){
-  //   markers.push({
-  //     id: state.filteredcafeInfo.id,
-  //     name: state.filteredcafeInfo.name,
-  //     point: state.filteredcafeInfo.point,
-  //     latitude: state.filteredTruckInfo.filteredcafeInfo.location["latitude"],
-  //     longitude: state.filteredcafeInfo.location["longitude"],
-  //     address: state.filteredcafeInfo.address,
-  //    tea: state.filteredcafeInfo.menu["tea"],
-  //    coffee : state.filteredcafeInfo.menu["coffee"],
-  //    cake: state.filteredcafeInfo.menu["cake"]
+  if(state.filteredcafeInfo.name !== null ){
+    markers.push({
+      id: state.filteredcafeInfo.id,
+      name: state.filteredcafeInfo.name,
+      point: state.filteredcafeInfo.point,
+      latitude: state.filteredcafeInfo.location["latitude"],
+      longitude: state.filteredcafeInfo.location["longitude"],
+      address: state.filteredcafeInfo.address,
+     tea: state.filteredcafeInfo.menu["tea"],
+     coffee : state.filteredcafeInfo.menu["coffee"],
+     cake: state.filteredcafeInfo.menu["cake"]
 
 
-  //   });
-  //   return {markers};
-  // }
+    });
+    return {markers};
+  }
   for (let prop in state.records) {
-    console.log("tea",state.records[prop].menu["tea"]);
     markers.push({
       id: state.records[prop].id,
      name: state.records[prop].name,

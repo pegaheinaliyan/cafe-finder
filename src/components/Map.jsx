@@ -11,7 +11,6 @@ const MyMap = withGoogleMap(props => {
       defaultZoom = {4}
       defaultCenter = {{ lat: 40.0412204, lng: -100.9387545 }}
     >  
-    {console.log(props.markers,"props.markers")}
        {props.markers.map((marker, idx) => (
       <Marker key = {idx}
         position = {{lat : marker.latitude, lng: marker.longitude }}

@@ -44,8 +44,12 @@ const inputCafeName = (state, action) => {
       location: {
         latitude: null,
         longitude: null,
-        name: ""
-      }
+      },
+       menu: {
+      tea: null,
+      coffee: null,
+      cake: null
+    }
     };
   }
   else
@@ -54,9 +58,10 @@ const inputCafeName = (state, action) => {
 }
 
 const findCafeInfo = (state, action) => {
-  let newState = Object.assign({}, state);
-  console.log(state, "state")
-  if (state.filter) {
+ for(let element of state.records){
+   let newState = Object.assign({}, state);
+    console.log("element.name",element.name)
+   if (state.filter === element.name ) {
     const record = state.records[0];
     newState.filteredcafeInfo = {
       id: record.id,
@@ -74,8 +79,8 @@ const findCafeInfo = (state, action) => {
       }
     }
   }
-  console.log("newState", newState)
   return newState;
+}
 }
 
 export default reducer;
